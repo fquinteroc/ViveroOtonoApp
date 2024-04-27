@@ -10,11 +10,15 @@ import { PlantaService } from '../planta.service';
 export class PlantasListaComponent implements OnInit {
 
   plantas: Array<Planta> = [];
+  interior_plantas: number = 0;
+  exterior_plantas: number = 0; 
   constructor(private plantaService: PlantaService) { }
 
   getPlantas(): void {
     this.plantaService.getPlantas().subscribe((plantas) => {
       this.plantas = plantas;
+      this.interior_plantas = plantas.filter(planta => planta.tipo === "Interior").length;
+      this.exterior_plantas = plantas.filter(planta => planta.tipo === "Exterior").length;
     });
   }
  

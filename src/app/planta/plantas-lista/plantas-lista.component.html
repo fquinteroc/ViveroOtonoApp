@@ -1,16 +1,16 @@
 <div class="container-fluid">
   <div class="row mt-4">
-    <div class="col text-center">
-      <hr style="border-top: 2px solid black; margin-bottom: 20px;"> <!-- Línea antes del título -->
-      <h1 style="font-family: 'Times New Roman', Times, serif; font-weight: bold;">Vivero el Otoño</h1> <!-- Título en negrita -->
-      <hr style="border-top: 2px solid black; margin-top: 20px;"> <!-- Línea después del título -->
-      <img src="../../../assets/logoVivero.jpeg" class="img-fluid" alt="Imagen" style="width: 80%; height: 50%;" />
-      <hr style="border-top: 2px solid black; margin-top: 20px;"> <!-- Línea después de la imagen -->
+    <div class="col-12">
+      <hr style="border-top: 2px solid black; margin-bottom: 20px;">
+      <h1 style="font-family: 'Times New Roman', Times, serif; font-weight: bold;">Vivero el Otoño</h1>
+      <hr style="border-top: 2px solid black; margin-top: 20px;">
+      <img src="../../../assets/vivero.png" class="img-fluid" alt="Imagen" style="max-width: 100%; height: auto;"> <!-- Reducimos el tamaño máximo de la imagen -->
+      <hr style="border-top: 2px solid black; margin-top: 20px;">
     </div>
   </div>
-  <div class="row" style="margin-top: -180px;">
-    <div class="col text-center">
-      <table class="table" style="width: 90%; margin: auto;">
+  <div class="row">
+    <div class="col-12 text-center">
+      <table class="table table-responsive" style="max-width: 80%;">
         <thead class="table-dark">
           <tr>
             <th scope="col">#</th>
@@ -30,8 +30,10 @@
       </table>
     </div>
   </div>
-  <div class="row mt-8"> <!-- Espacio después de la tabla -->
-    <div class="col text-center">
+  <div class="row">
+    <div class="col-lg-6">
+      <p><strong> Total plantas de Interior: </strong> {{ interior_plantas }}</p>
+      <p><strong> Total plantas de Exterior:</strong> {{ exterior_plantas }}</p>
     </div>
   </div>
 </div>
