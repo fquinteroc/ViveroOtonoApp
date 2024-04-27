@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row mt-4">
+    <div class="col text-center">
+      <hr style="border-top: 2px solid black; margin-bottom: 20px;"> <!-- Línea antes del título -->
+      <h1 style="font-family: 'Times New Roman', Times, serif; font-weight: bold;">Vivero el Otoño</h1> <!-- Título en negrita -->
+      <hr style="border-top: 2px solid black; margin-top: 20px;"> <!-- Línea después del título -->
+      <img src="../../../assets/logoVivero.jpeg" class="img-fluid" alt="Imagen" style="width: 80%; height: 50%;" />
+      <hr style="border-top: 2px solid black; margin-top: 20px;"> <!-- Línea después de la imagen -->
+    </div>
+  </div>
+  <div class="row" style="margin-top: -180px;">
+    <div class="col text-center">
+      <table class="table" style="width: 90%; margin: auto;">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre Común</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Clima</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let planta of plantas">
+            <th scope="row">{{ planta.id }}</th>
+            <td>{{ planta.nombre_comun }}</td>
+            <td>{{ planta.tipo }}</td>
+            <td>{{ planta.clima }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row mt-8"> <!-- Espacio después de la tabla -->
+    <div class="col text-center">
+    </div>
+  </div>
+</div>
